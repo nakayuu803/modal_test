@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4299955197130240232}
   - component: {fileID: 8238979289538200285}
   m_Layer: 5
-  m_Name: Hello
+  m_Name: errortext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Hello
 --- !u!1 &4704780761371826037

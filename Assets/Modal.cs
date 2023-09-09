@@ -1,3 +1,7 @@
+using System;
+using System.Linq.Expressions;
+// using System.Reflection.PortableExecutable;
+using System.Security.Cryptography.X509Certificates;
 using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,9 +12,13 @@ public class Modal : MonoBehaviour
 {
     public Transform parent;
     public InputField inputField;
-    
+
     public void create_error(){
         GameObject modal = (GameObject)Resources.Load("filter_error");
+        GameObject cilmodal  = modal.transform.Find("modal").gameObject;
+        GameObject modaltext  = cilmodal.transform.Find("errortext").gameObject;
+        Text errortext = modaltext.GetComponent<Text> ();
+        errortext.text = "エラー文表示";
         Instantiate(modal, parent);
     }
    
@@ -18,6 +26,15 @@ public class Modal : MonoBehaviour
         GameObject modal = (GameObject)Resources.Load("filter_name");
         Instantiate(modal, parent);
 
+    }
+
+    public void create_nocelect(){
+        GameObject modal = (GameObject)Resources.Load("filter_error");
+        GameObject cilmodal  = modal.transform.Find("modal").gameObject;
+        GameObject modaltext  = cilmodal.transform.Find("errortext").gameObject;
+        Text errortext = modaltext.GetComponent<Text> ();
+        errortext.text = "オブジェクトを選択してください。";
+        Instantiate(modal, parent);
     }
 
     public void destroy_error()
