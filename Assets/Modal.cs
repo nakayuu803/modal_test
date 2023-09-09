@@ -14,12 +14,14 @@ public class Modal : MonoBehaviour
     public InputField inputField;
 
     public void create_error(){
+        // if(完了ボタンが押されたとき全てが選択されていなかったら)){
         GameObject modal = (GameObject)Resources.Load("filter_error");
         GameObject cilmodal  = modal.transform.Find("modal").gameObject;
         GameObject modaltext  = cilmodal.transform.Find("errortext").gameObject;
         Text errortext = modaltext.GetComponent<Text> ();
         errortext.text = "エラー文表示";
         Instantiate(modal, parent);
+        // }
     }
    
     public void create_name(){
@@ -29,12 +31,14 @@ public class Modal : MonoBehaviour
     }
 
     public void create_nocelect(){
+        // if(削除、カラーボタンなどが押されたときオブジェクトが選択されていなかったら){
         GameObject modal = (GameObject)Resources.Load("filter_error");
         GameObject cilmodal  = modal.transform.Find("modal").gameObject;
         GameObject modaltext  = cilmodal.transform.Find("errortext").gameObject;
         Text errortext = modaltext.GetComponent<Text> ();
         errortext.text = "オブジェクトを選択してください。";
         Instantiate(modal, parent);
+    // }
     }
 
     public void destroy_error()
